@@ -33,7 +33,7 @@ int insertion_sort(int vetor[], int n){
         aux = vetor[i];
         for(j=i; (j>0) && (aux < vetor[j -1]); j--){
             vetor[j] = vetor[j - 1];
-			      movimento = movimento + 1;
+			    movimento = movimento + 1;
         }
         vetor[j] = aux;
     }
@@ -55,7 +55,7 @@ int selection_sort (int Vet[], int n){
             aux=Vet[i];
             Vet[i]=Vet[menor];
             Vet[menor]=aux;
-			      movimento = movimento + 1;
+			movimento = movimento + 1;
         }
     }
     for(int s=0; s<n; s++){
@@ -71,11 +71,10 @@ void copiar(int copia[], int original[],int tamanho){
 }
 
 char separador[] = ";";
-int nmrExecProvisorio;
 
 void exportar(char* nomeAlgoritmo, char* tamConj, int tempoExec, int movimentos, char* descConj){
-	  printf("%s%s %s%s %d%s %d%s %s%s %d\n", nomeAlgoritmo, separador, tamConj, separador, tempoExec, separador, movimentos, separador, descConj, separador, nmrExecProvisorio);
-    fprintf(pont_dados,"%s%s %s%s %d%s %d%s %s%s %d\n", nomeAlgoritmo, separador, tamConj, separador, tempoExec, separador, movimentos, separador, descConj, separador, nmrExecProvisorio);
+	  printf("%s%s %s%s %d%s %d%s %s%s %d\n", nomeAlgoritmo, separador, tamConj, separador, tempoExec, separador, movimentos, separador, descConj, separador);
+    fprintf(pont_dados,"%s%s %s%s %d%s %d%s %s%s %d\n", nomeAlgoritmo, separador, tamConj, separador, tempoExec, separador, movimentos, separador, descConj, separador);
 }
 
 void main()
@@ -83,16 +82,14 @@ void main()
     FILE *pont_arq1, *pont_arq2, *pont_arq3, *pont_arq4, *pont_arq5, *pont_arq6, *pont_arq7, *pont_arq8, *pont_arq9, *pont_arq10, *pont_arq11, *pont_arq12, *pont_arq13, *pont_arq14, *pont_arq15, *pont_arq16, *pont_arq17, *pont_arq18, *pont_arq19, *pont_arq20;
     int numUs, auxUs[20], AuxUs[20], movUs1, movUs2, movUs3, listaUs[20];
 
-	  // PONTEIRO PARA SALVAR OS DADOS OBTIDOS
+	// PONTEIRO PARA SALVAR OS DADOS OBTIDOS
     pont_dados = fopen("DadosExaminados.txt", "a+");
 
-    printf("\n-------------------------------------- Analise de algoritmos de ordenação ----------------------------------------------\n");
-    printf("Digite o número da Execução(PROVISÓRIO): \n");
-    scanf("%d", &nmrExecProvisorio); //Digitei 1, o Andrew pode digitar 2 e Saulo 3 por exemplo
+    printf("\n-------------------------------------- Analise de algoritmos de ordenacao ----------------------------------------------\n");
     /* Pegando dados do usuario */
   	printf("Analisaremos 20 conjuntos de dados e uma lista definida por voce\n\n");
 
-    printf("Digite quantos numeros haverá na sua lista (até 20 por enquanto): \n");
+    printf("Digite quantos numeros havera na sua lista (ate 20): \n");
     scanf("%d", &numUs);
 
   	for(int a=0; a < numUs; a++){
@@ -127,7 +124,7 @@ void main()
     clock_t fim3us = clock();
 
     //COLOCAR OS DADOS DA LISTA DO USUÁRIO PARA SER SALVO EM UMA FUNÇÃO
-    fprintf(pont_dados,"\nAlgoritmo; TamanhoConjunto; TempoExec; nmrMovimentos; DescConjunto; nmrExecucao \n");
+    fprintf(pont_dados,"\nAlgoritmo; TamanhoConjunto; TempoExec; nmrMovimentos; DescConjunto \n");
 
     int a = (int) fim1us-comeco1us, b = (int) fim2us-comeco2us, c = (int) fim3us-comeco3us;
     char qtdUs[6];
@@ -145,35 +142,35 @@ void main()
     // Ponteiro para o arquivo... tem que colocar \\
     // Testando se conseguimos encontrar os arquivos
 	  // 1k
-    if((pont_arq1 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\1k\\dtaleat1kdup9.txt", "r")) == NULL){
+    if((pont_arq1 = fopen("dtaleat1kdup9.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o primeiro arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[0], "1k");
         strcpy(desc[0], "com duplicidade e aleatorio");
     }
-	  if((pont_arq2 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\1k\\dtaleat1kuni7.txt", "r")) == NULL){
+	  if((pont_arq2 = fopen("dtaleat1kuni7.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o segundo arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[1], "1k");
         strcpy(desc[1], "com duplicidade e concavo decresceCresce");
     }
-	  if((pont_arq3 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\1k\\dtconcv1kdup0.txt", "r")) == NULL){
+	  if((pont_arq3 = fopen("dtconcv1kdup0.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o terceiro arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[2], "1k");
         strcpy(desc[2], "com duplicidade e Descrescente");
     }
-	  if((pont_arq4 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\1k\\dtdecre1kdup5.txt", "r")) == NULL){
+	  if((pont_arq4 = fopen("dtdecre1kdup5.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o quarto arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[3], "1k");
         strcpy(desc[3], "sem duplicidade e Aleatorio");
     }
-	  if((pont_arq5 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\1k\\dtdecre1kuni8.txt", "r")) == NULL){
+	  if((pont_arq5 = fopen("dtdecre1kuni8.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o quinto arquivo \n");
         exit(0);
     }else{
@@ -181,49 +178,49 @@ void main()
         strcpy(desc[4], "sem duplicidade e Descrescente");
     }
     // 5k
-    if((pont_arq6 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\5k\\dtaleat5kdup4.txt", "r")) == NULL){
+    if((pont_arq6 = fopen("dtaleat5kdup4.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o sexto arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[5], "5k");
         strcpy(desc[5], "com duplicidade e Aleatorio");
     }
-	  if((pont_arq7 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\5k\\dtaleat5kuni1.txt", "r")) == NULL){
+	  if((pont_arq7 = fopen("dtaleat5kuni1.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o setimo arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[6], "5k");
         strcpy(desc[6], "com duplicidade e Concavo-DecresceCensce");
     }
-	  if((pont_arq8 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\5k\\dtconcv5kdup4.txt", "r")) == NULL){
+	  if((pont_arq8 = fopen("dtconcv5kdup4.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o oitavo arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[7], "5k");
         strcpy(desc[7], "com duplicidade e Convexo-CresceDescresce");
     }
-	  if((pont_arq9 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\5k\\dtconvx5kdup2.txt", "r")) == NULL){
+	  if((pont_arq9 = fopen("dtconvx5kdup2.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o nono arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[8], "5k");
         strcpy(desc[8], "com duplicidade e Decrescente");
     }
-	  if((pont_arq10 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\5k\\dtconvx5kuni6.txt", "r")) == NULL){
+	  if((pont_arq10 = fopen("dtconvx5kuni6.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o decimo arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[9], "5k");
         strcpy(desc[9], "sem duplicidade e Aleatorio");
     }
-	  if((pont_arq11 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\5k\\dtdecre5kdup4.txt", "r")) == NULL){
+	  if((pont_arq11 = fopen("dtdecre5kdup4.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o decimo primeiro arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[10], "5k");
         strcpy(desc[10], "sem duplicidade e Convexo-CresceDescresce");
     }
-	  if((pont_arq12 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\5k\\dtdecre5kuni8.txt", "r")) == NULL){
+	  if((pont_arq12 = fopen("dtdecre5kuni8.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o decimo segundo arquivo \n");
         exit(0);
     }else{
@@ -231,35 +228,35 @@ void main()
         strcpy(desc[11], "sem duplicidade e Descresce");
     }
 	  // 10k
-	  if((pont_arq13 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\10k\\dtaleat10kdup4.txt", "r")) == NULL){
+	  if((pont_arq13 = fopen("dtaleat10kdup4.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o decimo terceiro arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[12], "10k");
         strcpy(desc[12], "com duplicidade e Aleatorio");
     }
-    if((pont_arq14 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\10k\\dtaleat10kuni7.txt", "r")) == NULL){
+    if((pont_arq14 = fopen("dtaleat10kuni7.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o decimo quarto arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[13], "10k");
         strcpy(desc[13], "com duplicidade e Concavo-DecresceCresce");
     }
-    if((pont_arq15 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\10k\\dtconcv10kdup6.txt", "r")) == NULL){
+    if((pont_arq15 = fopen("dtconcv10kdup6.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o decimo quinto arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[14], "10k");
         strcpy(desc[14], "com duplicidade e Descrescente");
     }
-    if((pont_arq16 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\10k\\dtdecre10kdup9.txt", "r")) == NULL){
+    if((pont_arq16 = fopen("dtdecre10kdup9.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o decimo sexto arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[15], "10k");
         strcpy(desc[15], "sem duplicidade e Aleatorio");
     }
-    if((pont_arq17 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\10k\\dtdecre10kuni9.txt", "r")) == NULL){
+    if((pont_arq17 = fopen("dtdecre10kuni9.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o decimo setimo arquivo \n");
         exit(0);
     }else{
@@ -267,21 +264,21 @@ void main()
         strcpy(desc[16], "sem duplicidade e Descrescente");
     }
 	  // 500
-	  if((pont_arq18 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\500\\dtaleat500dup5.txt", "r")) == NULL){
+	  if((pont_arq18 = fopen("dtaleat500dup5.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o decimo oitavo arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[17], "500");
         strcpy(desc[17], "com duplicidade e Aleatorio");
     }
-    if((pont_arq19 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\500\\dtconcv500dup6.txt", "r")) == NULL){
+    if((pont_arq19 = fopen("dtconcv500dup6.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o decimo nono arquivo \n");
         exit(0);
     }else{
         strcpy(sizeConjunto[18], "500");
         strcpy(desc[18], "com duplicidade e Concavo-DecresceCresce");
     }
-    if((pont_arq20 = fopen("C:\\Users\\pb\\Desktop\\TesteAps\\dados\\500\\dtdecre500uni8.txt", "r")) == NULL){
+    if((pont_arq20 = fopen("dtdecre500uni8.txt", "r")) == NULL){
         printf("\nProblemas ao abrir o vigesimo arquivo \n");
         exit(0);
     }else{
@@ -396,10 +393,29 @@ void main()
         i20++;
     }
 
-    printf("\n----------------------------------------------- LISTAS DESORDENADAS -------------------------------------------------------\n");
+    //Fechar arquivos após sua leitura
+    fclose(pont_arq1);
+    fclose(pont_arq2);
+    fclose(pont_arq3);
+    fclose(pont_arq4);
+    fclose(pont_arq5);
+    fclose(pont_arq6);
+    fclose(pont_arq7);
+    fclose(pont_arq8);
+    fclose(pont_arq9);
+    fclose(pont_arq10);
+    fclose(pont_arq11);
+    fclose(pont_arq12);
+    fclose(pont_arq13);
+    fclose(pont_arq14);
+    fclose(pont_arq15);
+    fclose(pont_arq16);
+    fclose(pont_arq17);
+    fclose(pont_arq18);
+    fclose(pont_arq19);
+    fclose(pont_arq20);
 
-    //>>>> Ler em forma de Matriz ao invez de tantas linhas <<<<
-    // Mostrando oq tem no arquivo
+    printf("\n----------------------------------------------- LISTAS DESORDENADAS -------------------------------------------------------\n");
     for(int k=0; k < i1; k++) printf("%d, ", valor1[k]);
   	printf("\n");
     for(int k=0; k < i2; k++) printf("%d, ", valor2[k]);
@@ -666,6 +682,7 @@ void main()
     contMovInsert[19] = insertion_sort(aux20, i20);
     fimi[19] = clock();
 
+
     // ORGANIZANDO COM SELECTION SORT
   	int contMovSelect[20];
 
@@ -749,10 +766,10 @@ void main()
     contMovSelect[19] = selection_sort(Aux20, i20);
     fims[19] = clock();
 
-    //>>>> CONTINUARIA igual <<<<
-  	//COLOCAR OS DADOS DAS LISTAS PARA SEREM SALVOS NA FUNÇÃO
-    int tempoDeExec, nmrMovimentos;
 
+  	//Salvando os dados das listas na função
+    int tempoDeExec, nmrMovimentos;
+    printf("\n");
     for(int cont = 0; cont < 20; cont++){
         tempoDeExec = (int) fim[cont]-comeco[cont];
         nmrMovimentos = (int) contMovBubble[cont];
@@ -769,26 +786,7 @@ void main()
         nmrMovimentos = (int) contMovSelect[cont];
         exportar("Selection Sort", sizeConjunto[cont], tempoDeExec, nmrMovimentos, desc[cont]);
     }
-    // Fechando arquivos
+
+    // Fechando arquivo após expotação dos dados
 	  fclose(pont_dados);
-    fclose(pont_arq1);
-    fclose(pont_arq2);
-    fclose(pont_arq3);
-    fclose(pont_arq4);
-    fclose(pont_arq5);
-    fclose(pont_arq6);
-    fclose(pont_arq7);
-    fclose(pont_arq8);
-    fclose(pont_arq9);
-    fclose(pont_arq10);
-    fclose(pont_arq11);
-    fclose(pont_arq12);
-    fclose(pont_arq13);
-    fclose(pont_arq14);
-    fclose(pont_arq15);
-    fclose(pont_arq16);
-    fclose(pont_arq17);
-    fclose(pont_arq18);
-    fclose(pont_arq19);
-    fclose(pont_arq20);
 }
