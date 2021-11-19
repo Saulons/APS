@@ -1,0 +1,80 @@
+
+Algoritmo; TamanhoConjunto; TempoExec; nmrMovimentos; DescConjunto; nmrExecucao 
+Bubble Sort; 0; 0; 0; Criado pelo usuario; 1
+Selection Sort; 0; 0; 0; Criado pelo usuario; 1
+Insertion Sort; 0; 0; 0; Criado pelo usuario; 1
+
+Algoritmo; TamanhoConjunto; TempoExec; nmrMovimentos; DescConjunto; nmrExecucao 
+Bubble Sort; 2; 0; 0; Criado pelo usuario; 1
+Selection Sort; 2; 0; 0; Criado pelo usuario; 1
+Insertion Sort; 2; 0; 0; Criado pelo usuario; 1
+
+Algoritmo; TamanhoConjunto; TempoExec; nmrMovimentos; DescConjunto; nmrExecucao 
+Bubble Sort; 2; 0; 0; Criado pelo usuario; 1
+Selection Sort; 2; 0; 0; Criado pelo usuario; 1
+Insertion Sort; 2; 0; 0; Criado pelo usuario; 1
+
+Algoritmo; TamanhoConjunto; TempoExec; nmrMovimentos; DescConjunto; nmrExecucao 
+Bubble Sort; 1; 0; 0; Criado pelo usuario; 2
+Selection Sort; 1; 0; 0; Criado pelo usuario; 2
+Insertion Sort; 1; 1; 0; Criado pelo usuario; 2
+Bubble Sort; 1k; 56; 250385; com duplicidade e aleatorio; 2
+Bubble Sort; 1k; 56; 248582; com duplicidade e concavo decresceCresce; 2
+Bubble Sort; 1k; 54; 249995; com duplicidade e Descrescente; 2
+Bubble Sort; 1k; 52; 500491; sem duplicidade e Aleatorio; 2
+Bubble Sort; 1k; 54; 500499; sem duplicidade e Descrescente; 2
+Bubble Sort; 5k; 271; 6241787; com duplicidade e Aleatorio; 2
+Bubble Sort; 5k; 255; 6285980; com duplicidade e Concavo-DecresceCensce; 2
+Bubble Sort; 5k; 253; 6249966; com duplicidade e Convexo-CresceDescresce; 2
+Bubble Sort; 5k; 308; 6257483; com duplicidade e Decrescente; 2
+Bubble Sort; 5k; 289; 6257498; sem duplicidade e Aleatorio; 2
+Bubble Sort; 5k; 304; 12502437; sem duplicidade e Convexo-CresceDescresce; 2
+Bubble Sort; 5k; 307; 12502499; sem duplicidade e Descresce; 2
+Bubble Sort; 10k; 620; 25102659; com duplicidade e Aleatorio; 2
+Bubble Sort; 10k; 692; 24981102; com duplicidade e Concavo-DecresceCresce; 2
+Bubble Sort; 10k; 542; 24999905; com duplicidade e Descrescente; 2
+Bubble Sort; 10k; 694; 50004849; sem duplicidade e Aleatorio; 2
+Bubble Sort; 10k; 626; 50004999; sem duplicidade e Descrescente; 2
+Bubble Sort; 500; 21; 64473; com duplicidade e Aleatorio; 2
+Bubble Sort; 500; 21; 62501; com duplicidade e Concavo-DecresceCresce; 2
+Bubble Sort; 500; 22; 125249; sem duplicidade e Descrescente; 2
+Insertion Sort; 1k; 42; 251383; com duplicidade e aleatorio; 2
+Insertion Sort; 1k; 43; 248582; com duplicidade e concavo decresceCresce; 2
+Insertion Sort; 1k; 44; 249995; com duplicidade e Descrescente; 2
+Insertion Sort; 1k; 43; 500491; sem duplicidade e Aleatorio; 2
+Insertion Sort; 1k; 43; 500499; sem duplicidade e Descrescente; 2
+Insertion Sort; 5k; 224; 6241787; com duplicidade e Aleatorio; 2
+Insertion Sort; 5k; 250; 6285980; com duplicidade e Concavo-DecresceCensce; 2
+Insertion Sort; 5k; 225; 6249966; com duplicidade e Convexo-CresceDescresce; 2
+Insertion Sort; 5k; 236; 6257483; com duplicidade e Decrescente; 2
+Insertion Sort; 5k; 220; 6257498; sem duplicidade e Aleatorio; 2
+Insertion Sort; 5k; 234; 12502437; sem duplicidade e Convexo-CresceDescresce; 2
+Insertion Sort; 5k; 236; 12502499; sem duplicidade e Descresce; 2
+Insertion Sort; 10k; 472; 25102659; com duplicidade e Aleatorio; 2
+Insertion Sort; 10k; 477; 24981102; com duplicidade e Concavo-DecresceCresce; 2
+Insertion Sort; 10k; 472; 24999905; com duplicidade e Descrescente; 2
+Insertion Sort; 10k; 524; 50004849; sem duplicidade e Aleatorio; 2
+Insertion Sort; 10k; 511; 50004999; sem duplicidade e Descrescente; 2
+Insertion Sort; 500; 21; 64473; com duplicidade e Aleatorio; 2
+Insertion Sort; 500; 21; 62501; com duplicidade e Concavo-DecresceCresce; 2
+Insertion Sort; 500; 21; 125249; sem duplicidade e Descrescente; 2
+Selection Sort; 1k; 43; 993; com duplicidade e aleatorio; 2
+Selection Sort; 1k; 43; 996; com duplicidade e concavo decresceCresce; 2
+Selection Sort; 1k; 44; 995; com duplicidade e Descrescente; 2
+Selection Sort; 1k; 44; 504; sem duplicidade e Aleatorio; 2
+Selection Sort; 1k; 43; 501; sem duplicidade e Descrescente; 2
+Selection Sort; 5k; 247; 4993; com duplicidade e Aleatorio; 2
+Selection Sort; 5k; 243; 4994; com duplicidade e Concavo-DecresceCensce; 2
+Selection Sort; 5k; 239; 4968; com duplicidade e Convexo-CresceDescresce; 2
+Selection Sort; 5k; 232; 4995; com duplicidade e Decrescente; 2
+Selection Sort; 5k; 242; 5000; sem duplicidade e Aleatorio; 2
+Selection Sort; 5k; 237; 2517; sem duplicidade e Convexo-CresceDescresce; 2
+Selection Sort; 5k; 227; 2501; sem duplicidade e Descresce; 2
+Selection Sort; 10k; 491; 9991; com duplicidade e Aleatorio; 2
+Selection Sort; 10k; 490; 9988; com duplicidade e Concavo-DecresceCresce; 2
+Selection Sort; 10k; 497; 9996; com duplicidade e Descrescente; 2
+Selection Sort; 10k; 519; 5036; sem duplicidade e Aleatorio; 2
+Selection Sort; 10k; 493; 5001; sem duplicidade e Descrescente; 2
+Selection Sort; 500; 22; 496; com duplicidade e Aleatorio; 2
+Selection Sort; 500; 21; 465; com duplicidade e Concavo-DecresceCresce; 2
+Selection Sort; 500; 21; 251; sem duplicidade e Descrescente; 2
